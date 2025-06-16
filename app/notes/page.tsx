@@ -56,55 +56,55 @@ export default async function NotesPage() {
             }
             acc[monthKey].push(post);
             return acc;
-        }, {} as Record<string, PostMeta[]>);    
-        
+        }, {} as Record<string, PostMeta[]>);        
         return (
-            <div className="flex flex-col w-full">                <div className="mb-8">
-                <h1 className="text-3xl font-bold mb-2 text-zinc-900 dark:text-zinc-100">Notes</h1>
-                <p className="text-zinc-600 dark:text-zinc-400">Trying to be more intentional with choices</p>
+            <div className="flex flex-col w-full">
+                <div className="mb-8">
+                    <h1 className="text-3xl font-bold mb-2 text-zinc-900 dark:text-zinc-100">Notes</h1>
+                    <p className="text-zinc-600 dark:text-zinc-400">Trying to be more intentional with choices</p>
                 </div>
                 
                 <div className="space-y-8">
                 {Object.entries(postsByMonth).map(([month, monthPosts]) => (
                     <div key={month}>
-                    {/* Month Header */}                    <div className="flex items-center gap-2 mb-2">
+                    {/* Month Header */}
+                    <div className="flex items-center gap-2 mb-2">
                         <span className="">&gt;</span>
                         <h2 className="text-lg font-medium text-zinc-700 dark:text-zinc-300">
-                        {month}
+                            {month}
                         </h2>
                     </div>
 
                     {/* Notes for this month */}
-                    <div className="ml-6 space-y-2">                
+                    <div className="ml-6 space-y-2">
                         {monthPosts.map((post) => (
-                        <div key={post.slug} className="flex items-center justify-between">                            <AnimatedLink 
-                            href={`/notes/${post.slug}`}
-                            className="font-medium text-zinc-900 dark:text-zinc-100 hover:text-zinc-600 dark:hover:text-zinc-300"
-                            >
-                            / {post.title}
-                            </AnimatedLink>
-                            {post.summary && (
-                            <span className="text-sm text-zinc-600 dark:text-zinc-400 font-normal">
-                                {post.summary}
-                            </span>
-                            )}
-                        </div>
-                        ))}
+                            <div key={post.slug} className="flex items-center justify-between">
+                                <AnimatedLink 
+                                    href={`/notes/${post.slug}`}
+                                    className="font-medium text-zinc-900 dark:text-zinc-100 hover:text-zinc-600 dark:hover:text-zinc-300"
+                                >
+                                    / {post.title}
+                                </AnimatedLink>
+                                {post.summary && (
+                                    <span className="text-sm text-zinc-600 dark:text-zinc-400 font-normal">
+                                        {post.summary}
+                                    </span>
+                                )}
+                            </div>                        ))}
                     </div>
                     </div>
                 ))}
                 </div>
             </div>
         );
-    } catch (error) {    // Fallback if notes directory doesn't exist or is empty
-        return (
+    } catch (error) {    // Fallback if notes directory doesn't exist or is empty        return (
         <div className="flex flex-col w-full">
             <div className="text-center py-12">
-            <h1 className="text-2xl font-medium mb-4">Notes</h1>            <p className="text-zinc-600 dark:text-zinc-400">
+            <h1 className="text-2xl font-medium mb-4">Notes</h1>
+            <p className="text-zinc-600 dark:text-zinc-400">
                 Notes directory not found. Create some notes to get started!
             </p>
             </div>
         </div>
-    );
   }
 }
