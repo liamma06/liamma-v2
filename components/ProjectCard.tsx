@@ -1,6 +1,7 @@
 'use client'
 
 import { useState } from 'react';
+import Image from 'next/image';
 import { FiGithub, FiPlay, FiChevronLeft, FiChevronRight } from 'react-icons/fi';
 import AnimatedLink from './AnimatedLink';
 
@@ -37,41 +38,37 @@ export default function ProjectCard({ project }: { project: Project }) {
       <div className="w-full h-48 relative bg-zinc-400 dark:bg-zinc-700 flex items-center justify-center overflow-hidden group">
         {project.images.length > 0 ? (
           <>            {/* Main Image */}
-            <img
+            <Image
               src={project.images[currentImageIndex]}
               alt={`${project.title} screenshot ${currentImageIndex + 1}`}
-              className="w-full h-full object-cover transition-all duration-300"
-              onError={(e) => {
-                // Fallback if image fails to load
-                e.currentTarget.style.display = 'none';
-                const fallbackElement = e.currentTarget.nextElementSibling as HTMLElement;
-                if (fallbackElement) {
-                  fallbackElement.style.display = 'flex';
-                }
+              fill
+              className="object-cover transition-all duration-300"
+              sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+              onError={() => {
+                // Note: Next.js Image component handles errors differently
+                // We'll need to use a state-based approach for fallback
               }}
             />
             
             {/* Fallback placeholder (hidden by default) */}
             <div className="absolute inset-0 bg-zinc-400 dark:bg-zinc-700 flex items-center justify-center text-zinc-600 dark:text-zinc-300 text-sm" style={{ display: 'none' }}>
               📸 Project Screenshot
-            </div>
-              {/* Navigation Arrows - Only show if multiple images */}
+            </div>            {/* Navigation Arrows - Only show if multiple images */}
             {hasMultipleImages && (
-              <>
-                <button
+              <>                <button
                   onClick={prevImage}
-                  className="absolute left-2 top-1/2 -translate-y-1/2 text-white/70 hover:text-white p-1 opacity-0 group-hover:opacity-100 transition-all duration-200 z-10 hover:scale-110"
+                  className="absolute left-2 top-1/2 -translate-y-1/2 bg-black/30 hover:bg-black/40 text-white p-2 rounded-full opacity-0 group-hover:opacity-100 transition-all duration-200 z-10 hover:scale-105 backdrop-blur-sm"
                   aria-label="Previous image"
                 >
-                  <FiChevronLeft size={20} />
+                  <FiChevronLeft size={18} />
                 </button>
                 
                 <button
                   onClick={nextImage}
-                  className="absolute right-2 top-1/2 -translate-y-1/2 text-white/70 hover:text-white p-1 opacity-0 group-hover:opacity-100 transition-all duration-200 z-10 hover:scale-110"
+                  className="absolute right-2 top-1/2 -translate-y-1/2 bg-black/30 hover:bg-black/40 text-white p-2 rounded-full opacity-0 group-hover:opacity-100 transition-all duration-200 z-10 hover:scale-105 backdrop-blur-sm"
                   aria-label="Next image"
                 >
-                  <FiChevronRight size={20} />
+                  <FiChevronRight size={18} />
                 </button>
                 
                 {/* Image indicators */}

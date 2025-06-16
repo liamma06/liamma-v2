@@ -25,26 +25,8 @@ export default function ProjectsPage() {  const sampleProjects = [
       youtubeLink: "https://youtube.com/watch?v=demoVideo3",
       githubLink: "https://github.com/liamma06/mornings-with-lebron",
       technologies: ["Next.js", "TypeScript", "Chart.js", "Express.js", "Tailwind CSS", "Anthropic API"],
-      description: "Interactive weather dashboard with 7-day forecasts, interactive maps, and weather alerts",
-      images: ["/projects/weather-dashboard.jpg", "/projects/weather-dashboard-2.jpg", "/projects/weather-dashboard-3.jpg"]
-    },
-    {
-      title: "Social Media Clone",
-      websiteLink: "https://social-app-clone.herokuapp.com",
-      youtubeLink: "https://youtube.com/watch?v=demoVideo4",
-      githubLink: "https://github.com/username/social-media-clone",
-      technologies: ["React", "Firebase", "Redux", "Styled Components", "Cloud Storage"],
-      description: "Instagram-inspired social media app with photo sharing, real-time messaging, and user profiles",
-      images: ["/projects/social-media-clone.jpg", "/projects/social-media-clone-2.jpg"]
-    },
-    {
-      title: "Expense Tracker",
-      websiteLink: "https://expense-tracker-pro.netlify.app",
-      youtubeLink: "https://youtube.com/watch?v=demoVideo5",
-      githubLink: "https://github.com/username/expense-tracker",
-      technologies: ["React Native", "Expo", "SQLite", "React Navigation", "Recharts"],
-      description: "Mobile expense tracking app with budget management, category insights, and spending analytics",
-      images: ["/projects/expense-tracker.jpg"]
+      description: "A prototype motivational journaling web app featuring LeBron-themed quotes and emotional insight charts.",
+      images: ["/projects/lebronhome.png", "/projects/lebronstats.png"]
     },
   ];
   

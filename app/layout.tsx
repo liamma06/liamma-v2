@@ -26,7 +26,7 @@ export default function RootLayout({
       <body className={`${inter.variable} antialiased`}>
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
           <main className="relative flex justify-center min-h-screen w-full bg-grid">
-            <div className="flex flex-col gap-4 w-full md:max-w-[650px] m-6 md:m-6 relative z-10 pt-2">              
+            <div className="flex flex-col gap-4 w-full md:max-w-[670px] m-6 md:m-6 relative z-10 pt-2">              
               <Header />
               {children}
               <Footer />
