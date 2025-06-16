@@ -44,7 +44,7 @@ export default function Footer(){
                 &copy; {new Date().getFullYear()} Liam Ma
             </div>
 
-            <div className="flex items-center gap-3">
+            <div className="flex items-center gap-2">
                 {socialLinks.map((link) => {
                     const Icon = link.icon;
                     return (

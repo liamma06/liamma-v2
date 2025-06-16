@@ -20,9 +20,9 @@ export default function Home() {
 
   return (
     <div className="flex flex-col w-full">
-      <div className="flex items-start justify-between gap-6">
+      <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-6">
         {/* Left Content Column */}
-        <div className="flex-1 space-y-4">
+        <div className="flex-1 space-y-4 order-1 md:order-1">
           {/* Introduction */}
           <div>
             <h1 className="text-4xl font-medium mb-1">
@@ -78,8 +78,8 @@ export default function Home() {
           </div>
         </div>
         
-        {/* Right - Profile Picture */}
-        <div className="w-56 h-56 relative rounded-full border-2 border-zinc-200 dark:border-zinc-700 overflow-hidden bg-zinc-50 dark:bg-zinc-800 flex-shrink-0">
+        {/* Profile Picture */}
+        <div className="w-48 h-48 md:w-56 md:h-56 relative rounded-full border-2 border-zinc-200 dark:border-zinc-700 overflow-hidden bg-zinc-50 dark:bg-zinc-800 flex-shrink-0 mx-auto md:mx-0 order-2 md:order-2">
           <div className="w-full h-full flex items-center justify-center text-zinc-500 dark:text-zinc-400 text-xs">
             Profile Picture
           </div>
