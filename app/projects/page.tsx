@@ -2,13 +2,13 @@ import ProjectList from '@/components/ProjectList';
 
 export default function ProjectsPage() {  const sampleProjects = [
     {
-      title: "E-Commerce Platform",
-      websiteLink: "https://mystore-demo.vercel.app",
+      title: "We-Wrapped",
+      websiteLink: "https://we-wrapped.vercel.app/",
       youtubeLink: "https://youtube.com/watch?v=demoVideo1",
-      githubLink: "https://github.com/username/ecommerce-platform",
-      technologies: ["React", "Next.js", "TypeScript", "Tailwind CSS", "Stripe", "MongoDB"],
-      description: "Full-stack e-commerce platform with cart functionality, payment processing, and admin dashboard",
-      images: ["/projects/ecommerce-platform.jpg", "/projects/ecommerce-platform-2.jpg"]
+      githubLink: "https://github.com/liamma06/we-wrapped",
+      technologies: ["Next.js", "TypeScript", "Tailwind CSS", "Supabase"],
+      description: "A simple web app for first-year engineering students to input and visualize progress, and compare their performance to class averages",
+      images: ["/projects/Wehome1.png", "/projects/Wehome2.png", "/projects/Weinput.png"]
     },
     {
       title: "Task Management App",
@@ -25,7 +25,7 @@ export default function ProjectsPage() {  const sampleProjects = [
       youtubeLink: "https://youtube.com/watch?v=demoVideo3",
       githubLink: "https://github.com/liamma06/mornings-with-lebron",
       technologies: ["Next.js", "TypeScript", "Chart.js", "Express.js", "Tailwind CSS", "Anthropic API"],
-      description: "A prototype motivational journaling web app featuring LeBron-themed quotes and emotional insight charts.",
+      description: "A prototype motivational journaling web app featuring LeBron-themed quotes and emotional insight charts",
       images: ["/projects/lebronhome.png", "/projects/lebronstats.png"]
     },
   ];
