@@ -57,30 +57,26 @@ body {
 }
 
 /*
-  simple link style - using higher specificity to override Tailwind
+  simple link style
 */
 
-body a {
+a {
   @apply inline-block transition-all duration-500 ease-out;
-  color: #3f3f46 !important; /* zinc-700 */
+  color: #3f3f46; /* zinc-700 */
   opacity: 0.9;
 }
 
-body a:hover {
-  color: #18181b !important; /* zinc-900 */
-  opacity: 1;
+a:hover {
+  color: #18181b; /* zinc-900 */
+  opacity:1;
 }
 
-body.dark a,
-.dark body a,
-html.dark body a {
-  color: #d1d5db !important; /* gray-300 */
+.dark a {
+  color: #d1d5db; /* gray-300 */
 }
 
-body.dark a:hover,
-.dark body a:hover,
-html.dark body a:hover {
-  color: #e5e7eb !important; /* gray-200 */
+.dark a:hover {
+  color: #e5e7eb; /* gray-200 */
 }
 
 /*
