@@ -2,30 +2,166 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
+/*
+  Color variables for light & dark mode
+*/
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #000000;
-    --foreground: #ffffff;
-  }
+:root {
+  --background: #fafafa;   
+  --foreground: #222222;   
+  --x-light: #8888880a;    
 }
 
 .dark {
-  --background: #000000;
-  --foreground: #ffffff;
+  --background: #121212;  
+  --foreground: #dddddd;   
+  --x-dark: #dddddd05;     
 }
 
-html {
-  background: var(--background);
-  color: var(--foreground);
-}
-
+/* 
+  Global body styles
+*/
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+}
+
+/*
+  Background grid with subtle X's
+*/
+.bg-grid {
+  background-image: 
+    /* Light mode tiny "×" in very subtle blue-gray */
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M11 11l2 2M13 11l-2 2' stroke='%234a51600c' stroke-width='1.2' stroke-linecap='round'/%3E%3C/svg%3E"),
+    /* Dark mode tiny "×" in soft muted lavender-gray */
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 '%3E%3Cpath d='M11 11l2 2M13 11l-2 2' stroke='%23a3a6c10d' stroke-width='1.2' stroke-linecap='round'/%3E%3C/svg%3E");
+  background-size: 28px 28px;
+}
+
+
+/*
+  Twinkle animation for subtle effect
+*/
+@keyframes twinkle {
+  0%, 100% { opacity: 0.15; }
+  50% { opacity: 0.5; }
+}
+
+.bg-grid::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: inherit;
+  background-size: inherit;
+  animation: twinkle 6s ease-in-out infinite;
+  pointer-events: none;
+}
+
+/*
+  simple link style - using higher specificity to override Tailwind
+*/
+
+body a {
+  @apply inline-block transition-all duration-500 ease-out;
+  color: #3f3f46 !important; /* zinc-700 */
+  opacity: 0.9;
+}
+
+body a:hover {
+  color: #18181b !important; /* zinc-900 */
+  opacity: 1;
+}
+
+body.dark a,
+.dark body a,
+html.dark body a {
+  color: #d1d5db !important; /* gray-300 */
+}
+
+body.dark a:hover,
+.dark body a:hover,
+html.dark body a:hover {
+  color: #e5e7eb !important; /* gray-200 */
+}
+
+/*
+  Animated underline effect 
+*/
+.underline {
+  --line: #646B8C;
+  --color: #2B3044;
+  text-decoration: none;
+  color: var(--color);
+  position: relative;
+}
+
+.dark .underline {
+  --line: #8892B8;
+  --color: #E5E7EB;
+}
+
+.underline span {
+  background-image: linear-gradient(0deg, var(--line) 0%, var(--line) 100%);
+  background-position: 100% 100%;
+  background-repeat: no-repeat;
+  background-size: var(--background-size, 100%) 1px;
+  transition: background-size 0.2s linear var(--background-delay, 0.15s);
+  font-size: 16px;
+  line-height: 20px;
+  transform: translateZ(0);
+}
+
+.underline svg {
+  vertical-align: middle;
+  display: inline;
+  line-height: 1;
+  width: 13px;
+  height: 20px;
+  position: relative;
+  left: -2px;
+  top: -1px;
+  fill: none;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 1px;
+  stroke: var(--line);
+  stroke-dasharray: 7.95 30;
+  stroke-dashoffset: var(--stroke-dashoffset, 46);
+  transition: stroke-dashoffset var(--stroke-duration, 0.15s) var(--stroke-easing, linear) var(--stroke-delay, 0s);
+}
+
+.underline:hover {
+  --background-size: 0%;
+  --background-delay: 0s;
+  --stroke-dashoffset: 26;
+  --stroke-duration: 0.3s;
+  --stroke-easing: cubic-bezier(0.3, 1.5, 0.5, 1);
+  --stroke-delay: 0.195s;
+}
+
+/*
+  Simple underline animation (alternative)
+*/
+.simple-underline {
+  position: relative;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.simple-underline::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 1px;
+  bottom: -2px;
+  left: 0;
+  background-color: #646B8C;
+  transition: width 0.3s ease;
+}
+
+.dark .simple-underline::after {
+  background-color: #8892B8;
+}
+
+.simple-underline:hover::after {
+  width: 100%;
 }
