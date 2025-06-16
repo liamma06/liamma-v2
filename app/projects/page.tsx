@@ -11,12 +11,12 @@ export default function ProjectsPage() {  const sampleProjects = [
       images: ["/projects/Wehome1.png", "/projects/Wehome2.png", "/projects/Weinput.png"]
     },
     {
-      title: "Task Management App",
+      title: "ProjectPal",
       websiteLink: "https://taskflow-app.netlify.app",
       youtubeLink: "https://youtube.com/watch?v=demoVideo2",
-      githubLink: "https://github.com/username/task-manager",
-      technologies: ["React", "Node.js", "Express", "PostgreSQL", "JWT", "Material-UI"],
-      description: "Collaborative task management tool with real-time updates, team collaboration, and progress tracking",
+      githubLink: "https://github.com/liamma06/ProjectPal",
+      technologies: ["Next.js", "TypeScript", "Tailwind CSS", "FastAPI","LangGraph"],
+      description: "Project Pal is your AI ideator, generating self-validating, unique project ideas with feature breakdowns and market comparisons.",
       images: ["/projects/task-manager.jpg"]
     },
     {
