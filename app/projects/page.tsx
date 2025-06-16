@@ -11,15 +11,6 @@ export default function ProjectsPage() {  const sampleProjects = [
       images: ["/projects/Wehome1.png", "/projects/Wehome2.png", "/projects/Weinput.png"]
     },
     {
-      title: "ProjectPal",
-      websiteLink: "https://taskflow-app.netlify.app",
-      youtubeLink: "https://youtube.com/watch?v=demoVideo2",
-      githubLink: "https://github.com/liamma06/ProjectPal",
-      technologies: ["Next.js", "TypeScript", "Tailwind CSS", "FastAPI","LangGraph"],
-      description: "Project Pal is your AI ideator, generating self-validating, unique project ideas with feature breakdowns and market comparisons.",
-      images: ["/projects/task-manager.jpg"]
-    },
-    {
       title: "Mornings with Lebron",
       websiteLink: "https://mornings-with-lebron.vercel.app/",
       youtubeLink: "https://youtube.com/watch?v=demoVideo3",

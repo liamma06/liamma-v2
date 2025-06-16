@@ -24,12 +24,9 @@ export default async function NotesPage() {
         const posts: PostMeta[] = await Promise.all(
             folderNames.map(async (folderName): Promise<PostMeta> => {
                 try {
-                    console.log(`Attempting to import: ./${folderName}/page.mdx`);
                     const { meta } = await import(`./${folderName}/page.mdx`);
-                    console.log(`Successfully imported meta for ${folderName}:`, meta);
                     return { ...meta, slug: folderName };
                 } catch (error) {
-                    console.error(`Error importing ${folderName}:`, error);
                     // If MDX file doesn't exist, create a fallback
                     return {
                         title: folderName.replace(/-/g, ' ').replace(/\b\w/g, l => l.toUpperCase()),
@@ -90,14 +87,15 @@ export default async function NotesPage() {
                                         {post.summary}
                                     </span>
                                 )}
-                            </div>                        ))}
+                            </div>                        
+                        ))}
                     </div>
                     </div>
                 ))}
                 </div>
             </div>
         );
-    } catch (error) {    // Fallback if notes directory doesn't exist or is empty        return (
+    } catch (error) {
         <div className="flex flex-col w-full">
             <div className="text-center py-12">
             <h1 className="text-2xl font-medium mb-4">Notes</h1>
