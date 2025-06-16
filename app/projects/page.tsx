@@ -1,7 +1,6 @@
 import ProjectList from '@/components/ProjectList';
 
-export default function ProjectsPage() {
-  const sampleProjects = [
+export default function ProjectsPage() {  const sampleProjects = [
     {
       title: "E-Commerce Platform",
       websiteLink: "https://mystore-demo.vercel.app",
@@ -9,7 +8,7 @@ export default function ProjectsPage() {
       githubLink: "https://github.com/username/ecommerce-platform",
       technologies: ["React", "Next.js", "TypeScript", "Tailwind CSS", "Stripe", "MongoDB"],
       description: "Full-stack e-commerce platform with cart functionality, payment processing, and admin dashboard",
-      image: "/projects/ecommerce-platform.jpg"
+      images: ["/projects/ecommerce-platform.jpg", "/projects/ecommerce-platform-2.jpg"]
     },
     {
       title: "Task Management App",
@@ -18,16 +17,16 @@ export default function ProjectsPage() {
       githubLink: "https://github.com/username/task-manager",
       technologies: ["React", "Node.js", "Express", "PostgreSQL", "JWT", "Material-UI"],
       description: "Collaborative task management tool with real-time updates, team collaboration, and progress tracking",
-      image: "/projects/task-manager.jpg"
+      images: ["/projects/task-manager.jpg"]
     },
     {
-      title: "Weather Dashboard",
-      websiteLink: "https://weather-dashboard-live.vercel.app",
+      title: "Mornings with Lebron",
+      websiteLink: "https://mornings-with-lebron.vercel.app/",
       youtubeLink: "https://youtube.com/watch?v=demoVideo3",
-      githubLink: "https://github.com/username/weather-dashboard",
-      technologies: ["Vue.js", "JavaScript", "Chart.js", "OpenWeather API", "CSS3"],
+      githubLink: "https://github.com/liamma06/mornings-with-lebron",
+      technologies: ["Next.js", "TypeScript", "Chart.js", "Express.js", "Tailwind CSS", "Anthropic API"],
       description: "Interactive weather dashboard with 7-day forecasts, interactive maps, and weather alerts",
-      image: "/projects/weather-dashboard.jpg"
+      images: ["/projects/weather-dashboard.jpg", "/projects/weather-dashboard-2.jpg", "/projects/weather-dashboard-3.jpg"]
     },
     {
       title: "Social Media Clone",
@@ -36,7 +35,7 @@ export default function ProjectsPage() {
       githubLink: "https://github.com/username/social-media-clone",
       technologies: ["React", "Firebase", "Redux", "Styled Components", "Cloud Storage"],
       description: "Instagram-inspired social media app with photo sharing, real-time messaging, and user profiles",
-      image: "/projects/social-media-clone.jpg"
+      images: ["/projects/social-media-clone.jpg", "/projects/social-media-clone-2.jpg"]
     },
     {
       title: "Expense Tracker",
@@ -45,7 +44,7 @@ export default function ProjectsPage() {
       githubLink: "https://github.com/username/expense-tracker",
       technologies: ["React Native", "Expo", "SQLite", "React Navigation", "Recharts"],
       description: "Mobile expense tracking app with budget management, category insights, and spending analytics",
-      image: "/projects/expense-tracker.jpg"
+      images: ["/projects/expense-tracker.jpg"]
     },
   ];
   
