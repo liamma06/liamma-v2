@@ -2,16 +2,8 @@
 
 import Link from "next/link";
 import { FiTwitter, FiGithub, FiLinkedin, FiMail } from "react-icons/fi";
-import { useTheme } from "next-themes";
-import { useState, useEffect } from "react";
 
 export default function Footer(){
-    const { theme } = useTheme();
-    const [mounted, setMounted] = useState(false);
-
-    useEffect(() => {
-        setMounted(true);
-    }, []);
 
     const socialLinks = [
         {
@@ -40,7 +32,7 @@ export default function Footer(){
         }
     ];    return (
         <footer className="flex items-center justify-between py-8 w-full" suppressHydrationWarning>
-            <div className={`text-sm ${mounted && theme === "dark" ? "text-gray-400" : "text-zinc-700"}`}>
+            <div className="text-sm text-zinc-700 dark:text-zinc-400">
                 &copy; {new Date().getFullYear()} Liam Ma
             </div>
 
@@ -55,7 +47,7 @@ export default function Footer(){
                                 target: "_blank", 
                                 rel: "noopener noreferrer" 
                             })}
-                            className="p-2 rounded-full hover:rotate-12 hover:scale-110 transform transition-all duration-200 ease-out"
+                            className="p-2 rounded-full hover:rotate-12 hover:scale-110 transform transition-all duration-200 ease-out text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-zinc-200"
                             aria-label={link.name}
                         >                        
                             <Icon className="h-5 w-5" />
