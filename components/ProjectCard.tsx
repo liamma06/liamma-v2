@@ -2,10 +2,11 @@
 
 import { useState } from 'react';
 import Image from 'next/image';
-import { FiGithub, FiPlay, FiChevronLeft, FiChevronRight } from 'react-icons/fi';
+import { FiGithub, FiChevronLeft, FiChevronRight } from 'react-icons/fi';
 import AnimatedLink from './AnimatedLink';
+import VideoModal from "./VideoModal";
 
-interface Project {
+export interface Project {
   title: string;
   websiteLink: string;
   youtubeLink: string;
@@ -37,7 +38,8 @@ export default function ProjectCard({ project }: { project: Project }) {
       {/* Project Image Carousel */}
       <div className="w-full h-48 relative bg-zinc-400 dark:bg-zinc-700 flex items-center justify-center overflow-hidden group">
         {project.images.length > 0 ? (
-          <>            {/* Main Image */}
+          <>            
+          {/* Main Image */}
             <Image
               src={project.images[currentImageIndex]}
               alt={`${project.title} screenshot ${currentImageIndex + 1}`}
@@ -53,14 +55,16 @@ export default function ProjectCard({ project }: { project: Project }) {
             {/* Fallback placeholder (hidden by default) */}
             <div className="absolute inset-0 bg-zinc-400 dark:bg-zinc-700 flex items-center justify-center text-zinc-600 dark:text-zinc-300 text-sm" style={{ display: 'none' }}>
               📸 Project Screenshot
-            </div>            {/* Navigation Arrows - Only show if multiple images */}
+            </div>            
+            {/* Navigation Arrows - Only show if multiple images */}
             {hasMultipleImages && (
-              <>                <button
+              <>                
+                <button
                   onClick={prevImage}
                   className="absolute left-2 top-1/2 -translate-y-1/2 bg-black/30 hover:bg-black/40 text-white p-2 rounded-full opacity-0 group-hover:opacity-100 transition-all duration-200 z-10 hover:scale-105 backdrop-blur-sm"
                   aria-label="Previous image"
                 >
-                  <FiChevronLeft size={18} />
+                    <FiChevronLeft size={18} />
                 </button>
                 
                 <button
@@ -68,7 +72,7 @@ export default function ProjectCard({ project }: { project: Project }) {
                   className="absolute right-2 top-1/2 -translate-y-1/2 bg-black/30 hover:bg-black/40 text-white p-2 rounded-full opacity-0 group-hover:opacity-100 transition-all duration-200 z-10 hover:scale-105 backdrop-blur-sm"
                   aria-label="Next image"
                 >
-                  <FiChevronRight size={18} />
+                    <FiChevronRight size={18} />
                 </button>
                 
                 {/* Image indicators */}
@@ -118,15 +122,12 @@ export default function ProjectCard({ project }: { project: Project }) {
                     >
                         <FiGithub size={20} />
                     </a>            
-                    <a 
-                    href={project.youtubeLink}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-zinc-600 dark:text-zinc-400 hover:text-zinc-800 dark:hover:text-zinc-200 transition-all duration-200 hover:scale-110 hover:rotate-12"
-                    aria-label="Demo Video"
-                    >
-                        <FiPlay size={20} />
-                    </a>
+                    {project.youtubeLink && (
+                      <VideoModal 
+                        videoUrl={project.youtubeLink} 
+                        projectTitle={project.title}
+                      />
+                    )}
                 </div>        
             </div>        
 

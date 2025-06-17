@@ -27,6 +27,7 @@ export default async function NotesPage() {
                     const { meta } = await import(`./${folderName}/page.mdx`);
                     return { ...meta, slug: folderName };
                 } catch (error) {
+                    console.error(`Error importing ${folderName}/page.mdx:`, error);
                     // If MDX file doesn't exist, create a fallback
                     return {
                         title: folderName.replace(/-/g, ' ').replace(/\b\w/g, l => l.toUpperCase()),
@@ -96,13 +97,16 @@ export default async function NotesPage() {
             </div>
         );
     } catch (error) {
-        <div className="flex flex-col w-full">
-            <div className="text-center py-12">
-            <h1 className="text-2xl font-medium mb-4">Notes</h1>
-            <p className="text-zinc-600 dark:text-zinc-400">
-                Notes directory not found. Create some notes to get started!
-            </p>
+        console.error('Error reading notes directory:', error);
+        return (
+            <div className="flex flex-col w-full">
+                <div className="text-center py-12">
+                    <h1 className="text-2xl font-medium mb-4">Notes</h1>
+                    <p className="text-zinc-600 dark:text-zinc-400">
+                        Notes directory not found. Create some notes to get started!
+                    </p>
+                </div>
             </div>
-        </div>
+        );
   }
 }
