@@ -14,7 +14,23 @@ const inter = Inter({
 
 export const metadata: Metadata = {
   title: "Liam Ma",
-  metadataBase: new URL("https://liamma.ca"),
+  description: "Hi, I'm Liam — an engineering student building projects and exploring new technologies.",
+  metadataBase: new URL("https://liamma.com"),
+  openGraph: {
+    title: "Liam Ma",
+    description: "Hi, I'm Liam — an engineering student building projects and exploring new technologies.",
+    url: "https://liamma.com",
+    siteName: "Liam Ma",
+    images: [
+      {
+        url: "/og-main.png",
+        width: 1200,
+        height: 630,
+        alt: "Liam Ma Portfolio Screenshot",
+      },
+    ],
+    type: "website",
+  }
 };
 
 
