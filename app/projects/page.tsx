@@ -1,4 +1,5 @@
 import ProjectList from '@/components/ProjectList';
+import AnimatedLink from '@/components/AnimatedLink';
 
 export default function ProjectsPage() {  const sampleProjects = [
     {
@@ -20,8 +21,7 @@ export default function ProjectsPage() {  const sampleProjects = [
       images: ["/projects/lebronhome.png", "/projects/lebronstats.png"]
     },
   ];
-  
-  return (
+    return (
     <div className="flex flex-col w-full">
       <div className="mb-8">
         <h1 className="text-3xl font-bold mb-2 text-gray-900 dark:text-gray-100">Projects</h1>
@@ -29,6 +29,17 @@ export default function ProjectsPage() {  const sampleProjects = [
       </div>
       
       <ProjectList projects={sampleProjects} />
+      
+      {/* GitHub Link */}
+      <div className="flex justify-center mt-3 pt-3 dark:border-gray-700">
+        <AnimatedLink 
+          href="https://github.com/liamma06" 
+          external={true}
+          className="text-gray-700 dark:text-gray-300"
+        >
+          Check out my other projects
+        </AnimatedLink>
+      </div>
     </div>
   );
 }
