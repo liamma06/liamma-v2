@@ -5,16 +5,16 @@ import AnimatedLink from "@/components/AnimatedLink";
 export default function Home() {
   const recentProjects = [
     {
-      title: "Project Alpha",
-      description: "A modern web application built with Next.js"
+      title: "",
+      description: "continue building and learning through projects"
     },
     {
-      title: "Project Beta", 
-      description: "Mobile-first design system and component library"
+      title: "",
+      description: "Exploring new tools"
     },
     {
-      title: "Project Gamma",
-      description: "Full-stack e-commerce platform"
+      title: "",
+      description: "Joining clubs and communities to meet people"
     }
   ];
 
@@ -38,13 +38,13 @@ export default function Home() {
             <ul className="grid gap-1 text-base mb-4">
               <li className="flex flex-col gap-2 pl-6 relative">
                 <div className="absolute left-0 top-[12px] w-[8px] h-[2px] bg-current opacity-60" />
-                <span className="italic font-medium">recent work 🚀</span>
+                <span className="italic font-medium">In the upcoming year, I'm looking to</span>
                 <ul className="grid gap-1 pl-6">
                   {recentProjects.map((project, index) => (
                     <li key={index} className="relative flex items-start gap-4">
                       <span className="absolute left-[-16px] top-[6px] text-xs opacity-50">~</span>
                       <span>
-                        {project.title} - {project.description}
+                        {project.title}  {project.description}
                       </span>
                     </li>
                   ))}
@@ -52,7 +52,7 @@ export default function Home() {
                     <span className="absolute left-[-16px] top-[6px] text-xs opacity-50">~</span>
                     <span>
                       <AnimatedLink href="/projects">
-                        Check out my other projects
+                        Check out my projects
                       </AnimatedLink>
                     </span>
                   </li>
