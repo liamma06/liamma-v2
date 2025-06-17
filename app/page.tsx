@@ -60,18 +60,18 @@ export default function Home() {
               </li>
             </ul>
 
-            {/* Resume Link */}
+            {/* Resume Link 
             <div className="flex items-center gap-2 pl-6 relative mb-2">
               <div className="absolute left-0 top-[12px] w-[8px] h-[2px] bg-current opacity-60" />
               <AnimatedLink href="/resume.pdf">
-                View my resume
+                Download my resume
               </AnimatedLink>
-            </div>
+            </div>*/}
             
             {/* Blog link*/}
             <div className="flex items-center gap-2 pl-6 relative">
               <div className="absolute left-0 top-[12px] w-[8px] h-[2px] bg-current opacity-60" />
-              <AnimatedLink href="/blogs">
+              <AnimatedLink href="/notes">
                 Follow my learning journey 
               </AnimatedLink>
             </div>
@@ -81,7 +81,14 @@ export default function Home() {
         {/* Profile Picture */}
         <div className="w-48 h-48 md:w-56 md:h-56 relative rounded-full border-2 border-zinc-200 dark:border-zinc-700 overflow-hidden bg-zinc-50 dark:bg-zinc-800 flex-shrink-0 mx-auto md:mx-0 order-2 md:order-2">
           <div className="w-full h-full flex items-center justify-center text-zinc-500 dark:text-zinc-400 text-xs">
-            Profile Picture
+            <Image
+              src="/profile.jpg"
+              alt="Liam's profile picture"
+              width={200}
+              height={200}
+              className="object-cover w-full h-full"
+              priority
+            />
           </div>
         </div>
       </div>
