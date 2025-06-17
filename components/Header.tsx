@@ -4,17 +4,9 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import Image from "next/image";
 import ThemeChanger from "./ThemeChanger";
-import { useTheme } from "next-themes";
-import { useState, useEffect } from "react";
 
 export default function Header() {
     const pathname = usePathname();
-    const { theme } = useTheme();
-    const [mounted, setMounted] = useState(false);
-
-    useEffect(() => {
-        setMounted(true);
-    }, []);
 
     return (
         <header className="flex items-center justify-between py-2 w-full" suppressHydrationWarning>            
@@ -24,7 +16,7 @@ export default function Header() {
                     alt="Liam Ma" 
                     width={200} 
                     height={40}
-                    className={`transition-all duration-300 ease-out ${mounted && theme === "dark" ? "invert" : "hover:brightness-110 hover:contrast-110"}`}
+                    className="transition-all duration-300 ease-out dark:invert hover:brightness-110 hover:contrast-110"
                 />
             </Link>
             <nav className="flex items-center space-x-4"> 

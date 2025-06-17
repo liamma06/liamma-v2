@@ -142,7 +142,7 @@ export default function ProjectCard({ project }: { project: Project }) {
                 {project.technologies.map((tech, index) => (            
                     <span 
                     key={index}
-                    className="px-2 py-1 text-xs rounded-md font-medium bg-zinc-100 text-zinc-700 dark:bg-zinc-800 dark:text-zinc-300"
+                    className="px-2 py-1 text-xs rounded-md font-medium bg-zinc-200 text-zinc-700 dark:bg-zinc-800 dark:text-zinc-300"
                     >
                         {tech}
                     </span>
