@@ -6,7 +6,7 @@ export default function ProjectsPage() {  const sampleProjects = [
       title: "We-Wrapped",
       websiteLink: "https://we-wrapped.vercel.app/",
       youtubeLink: "https://www.youtube.com/embed/n_jLcT6Ld4I",
-      githubLink: "https://github.com/liamma06/we-wrapped",
+      githubLink: "https://github.com/liamma06/we-wrapped",      
       technologies: ["Next.js", "TypeScript", "Tailwind CSS", "Supabase"],
       description: "A simple web app for first-year engineering students to input and visualize progress, and compare their performance to class averages",
       images: ["/projects/Wehome1.png", "/projects/Wehome2.png", "/projects/Weinput.png"]
@@ -15,7 +15,7 @@ export default function ProjectsPage() {  const sampleProjects = [
       title: "Mornings with Lebron",
       websiteLink: "https://mornings-with-lebron.vercel.app/",
       youtubeLink: "https://www.youtube.com/embed/Sri6EJDq8gE",
-      githubLink: "https://github.com/liamma06/mornings-with-lebron",
+      githubLink: "https://github.com/liamma06/mornings-with-lebron",      
       technologies: ["Next.js", "TypeScript", "Chart.js", "Express.js", "Tailwind CSS", "Anthropic API"],
       description: "A prototype motivational journaling web app featuring LeBron-themed quotes and emotional insight charts",
       images: ["/projects/lebronhome.png", "/projects/lebronstats.png"]

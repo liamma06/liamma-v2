@@ -1,5 +1,4 @@
 import Image from "next/image";
-import Link from "next/link";
 import AnimatedLink from "@/components/AnimatedLink";
 
 export default function Home() {
@@ -26,7 +25,7 @@ export default function Home() {
           {/* Introduction */}
           <div>
             <h1 className="text-4xl font-medium mb-1">
-              Hi, I'm Liam👋
+              Hi, I&apos;m Liam👋
             </h1>
             <p className="opacity-70">
               Engineering @ Western
@@ -38,7 +37,7 @@ export default function Home() {
             <ul className="grid gap-1 text-base mb-4">
               <li className="flex flex-col gap-2 pl-6 relative">
                 <div className="absolute left-0 top-[12px] w-[8px] h-[2px] bg-current opacity-60" />
-                <span className="italic font-medium">In the upcoming year, I'm looking to</span>
+                <span className="italic font-medium">In the upcoming year, I am looking to</span>
                 <ul className="grid gap-1 pl-6">
                   {recentProjects.map((project, index) => (
                     <li key={index} className="relative flex items-start gap-4">
