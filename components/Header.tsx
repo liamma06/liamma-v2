@@ -19,7 +19,7 @@ export default function Header() {
                     className="transition-all duration-300 ease-out dark:invert hover:brightness-110 hover:contrast-110"
                 />
             </Link>
-            <nav className="flex items-center space-x-4 gap-6"> 
+            <nav className="flex items-center space-x-4 sm:gap-2 md:gap-6 lg:gap-6"> 
                 <Link 
                     href="/projects" 
                     className={`transition-all duration-200 font-medium ${
