@@ -30,13 +30,14 @@ export default function Footer(){
             icon: FiMail,
             external: false
         }
-    ];    return (
+    ];    
+    return (
         <footer className="flex items-center justify-between py-8 w-full" suppressHydrationWarning>
             <div className="text-sm text-zinc-700 dark:text-zinc-400">
                 &copy; {new Date().getFullYear()} Liam Ma
             </div>
 
-            <div className="flex items-center gap-2">
+            <div className="flex items-center gap-3">
                 {socialLinks.map((link) => {
                     const Icon = link.icon;
                     return (
