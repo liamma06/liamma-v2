@@ -20,6 +20,15 @@ export default function ProjectsPage() {  const sampleProjects = [
       description: "A prototype motivational journaling web app featuring LeBron-themed quotes and emotional insight charts",
       images: ["/projects/lebronhome.png", "/projects/lebronstats.png"]
     },
+    {
+      title: "SQL Query",
+      websiteLink: "https://askql-bt0x99yab-liamma06s-projects.vercel.app/",
+      youtubeLink: "https://www.youtube.com/embed/mFFeuv-W9BI",
+      githubLink: "https://github.com/liamma06/askql/tree/main",
+      technologies: ["Next.js", "TypeScript", "Tailwind CSS", "SQLite","Redis", "Anthropic API", "GCP"],
+      description: "web app for querying a csv file using natural language or SQL",
+      images:["/projects/askqlMain.jpeg", "/projects/askqlDash.png", "/projects/askHistory.png"]
+    }
   ];
     return (
     <div className="flex flex-col w-full">
