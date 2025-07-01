@@ -38,7 +38,7 @@ export default function Home() {
               <li className="flex flex-col gap-2 pl-6 relative">
                 <div className="absolute left-0 top-[12px] w-[8px] h-[2px] bg-current opacity-60" />
                 <span className="italic font-medium">In the upcoming year, I am looking to</span>
-                <ul className="grid gap-1 pl-6">
+                <ul className="grid gap-1 pl-6">ush
                   {recentProjects.map((project, index) => (
                     <li key={index} className="relative flex items-start gap-4">
                       <span className="absolute left-[-16px] top-[6px] text-xs opacity-50">~</span>
