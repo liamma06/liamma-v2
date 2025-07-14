@@ -25,7 +25,7 @@ export default function ProjectsPage() {  const sampleProjects = [
       websiteLink: "https://askql-bt0x99yab-liamma06s-projects.vercel.app/",
       youtubeLink: "https://www.youtube.com/embed/mFFeuv-W9BI",
       githubLink: "https://github.com/liamma06/askql/tree/main",
-      technologies: ["Next.js", "TypeScript", "Tailwind CSS", "SQLite","Redis", "Anthropic API", "GCP"],
+      technologies: ["Next.js", "TypeScript", "Tailwind CSS", "SQLite","Redis", "Anthropic API", "GCP", "GO"],
       description: "web app for querying a csv file using natural language or SQL",
       images:["/projects/askqlMain.jpeg", "/projects/askqlDash.png", "/projects/askHistory.png"]
     }
