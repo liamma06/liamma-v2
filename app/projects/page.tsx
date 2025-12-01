@@ -12,6 +12,15 @@ export default function ProjectsPage() {  const sampleProjects = [
       images: ["/projects/Wehome1.png", "/projects/Wehome2.png", "/projects/Weinput.png"]
     },
     {
+      title: "Trash To Impress",
+      websiteLink: "https://github.com/liamma06/trashtoimpress",
+      youtubeLink: "https://www.youtube.com/embed/QQ1ePIDMNyg",
+      githubLink: "https://github.com/liamma06/trashtoimpress",      
+      technologies: ["Next.js", "TypeScript", "Tailwind CSS", "FastAPI", "Python", "Gemini API", "LangChain","LangGraph"],
+      description: "Product designing tool for reusing waste materials, powered by Gemini and LangChain workflow",
+      images: ["/projects/TTIhomepage.png", "/projects/TTIinput.png","/projects/TTI4ideas.png", "/projects/TTIedit.png", "/projects/TTILamp.png", "/projects/TTIfinal.png"]
+    },
+    {
       title: "Mornings with Lebron",
       websiteLink: "https://mornings-with-lebron.vercel.app/",
       youtubeLink: "https://www.youtube.com/embed/Sri6EJDq8gE",
