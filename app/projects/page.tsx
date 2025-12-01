@@ -17,7 +17,7 @@ export default function ProjectsPage() {  const sampleProjects = [
       youtubeLink: "https://www.youtube.com/embed/QQ1ePIDMNyg",
       githubLink: "https://github.com/liamma06/trashtoimpress",      
       technologies: ["Next.js", "TypeScript", "Tailwind CSS", "FastAPI", "Python", "Gemini API", "LangChain","LangGraph"],
-      description: "Product designing tool for reusing waste materials, powered by Gemini and LangChain workflow",
+      description: "Product designing tool for reusing waste materials, powered by Gemini and LangChain workflow. Submitted to Hack the Campus",
       images: ["/projects/TTIhomepage.png", "/projects/TTIinput.png","/projects/TTI4ideas.png", "/projects/TTIedit.png", "/projects/TTILamp.png", "/projects/TTIfinal.png"]
     },
     {
