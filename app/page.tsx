@@ -35,6 +35,10 @@ export default function Home() {
           {/* Recent Work Section */}
           <div>
             <ul className="grid gap-1 text-base mb-4">
+              <li className="flex items-center gap-2 pl-6 relative">
+                <div className="absolute left-0 top-[12px] w-[8px] h-[2px] bg-current opacity-60" />
+                <span className="font-medium">Engineering <AnimatedLink href="https://www.vitalearning.ca/">VITA Learning</AnimatedLink></span>
+              </li>
               <li className="flex flex-col gap-2 pl-6 relative">
                 <div className="absolute left-0 top-[12px] w-[8px] h-[2px] bg-current opacity-60" />
                 <span className="italic font-medium">In the upcoming year, I am looking to</span>
