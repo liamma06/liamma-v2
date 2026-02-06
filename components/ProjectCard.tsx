@@ -9,7 +9,7 @@ import VideoModal from "./VideoModal";
 export interface Project {
   title: string;
   websiteLink: string;
-  youtubeLink: string;
+  youtubeLink?: string;
   githubLink: string;
   technologies: string[];
   description: string;

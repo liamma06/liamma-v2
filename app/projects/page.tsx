@@ -3,13 +3,13 @@ import AnimatedLink from '@/components/AnimatedLink';
 
 export default function ProjectsPage() {  const sampleProjects = [
     {
-      title: "We-Wrapped",
-      websiteLink: "https://we-wrapped.vercel.app/",
-      youtubeLink: "https://www.youtube.com/embed/n_jLcT6Ld4I",
-      githubLink: "https://github.com/liamma06/we-wrapped",      
-      technologies: ["Next.js", "TypeScript", "Tailwind CSS", "Supabase"],
-      description: "A simple web app for first-year engineering students to input and visualize progress, and compare their performance to class averages",
-      images: ["/projects/Wehome1.png", "/projects/Wehome2.png", "/projects/Weinput.png"]
+      title: "Care Bridge",
+      websiteLink: "https://github.com/liamma06/Spark",
+      //youtubeLink: "https://www.youtube.com/embed/n_jLcT6Ld4I",
+      githubLink: "https://github.com/liamma06/Spark",      
+      technologies: ["Next.js", "TypeScript", "Tailwind CSS", "Supabase", "Python", "Cohere"],
+      description: "A full-stack healthcare platform that transforms unstructured patient conversations into clinical timelines to streamline rural care coordination. Won at Spark Hacks 2026",
+      images: ["/projects/Spark-1-image.jpg", "/projects/Spark-2-image.png", "/projects/Spark-3-image.png"]
     },
     {
       title: "Trash To Impress",
@@ -19,6 +19,15 @@ export default function ProjectsPage() {  const sampleProjects = [
       technologies: ["Next.js", "TypeScript", "Tailwind CSS", "FastAPI", "Python", "Gemini API", "LangChain","LangGraph"],
       description: "Product designing tool for reusing waste materials, powered by Gemini and LangChain workflow. Submitted to Hack the Campus",
       images: ["/projects/TTIhomepage.png", "/projects/TTIinput.png","/projects/TTI4ideas.png", "/projects/TTIedit.png", "/projects/TTILamp.png", "/projects/TTIfinal.png"]
+    },
+        {
+      title: "We-Wrapped",
+      websiteLink: "https://we-wrapped.vercel.app/",
+      youtubeLink: "https://www.youtube.com/embed/n_jLcT6Ld4I",
+      githubLink: "https://github.com/liamma06/we-wrapped",      
+      technologies: ["Next.js", "TypeScript", "Tailwind CSS", "Supabase"],
+      description: "A simple web app for first-year engineering students to input and visualize progress, and compare their performance to class averages",
+      images: ["/projects/Wehome1.png", "/projects/Wehome2.png", "/projects/Weinput.png"]
     },
     {
       title: "Mornings with Lebron",
