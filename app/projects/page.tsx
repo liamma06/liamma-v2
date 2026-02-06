@@ -9,7 +9,7 @@ export default function ProjectsPage() {  const sampleProjects = [
       githubLink: "https://github.com/liamma06/Spark",      
       technologies: ["Next.js", "TypeScript", "Tailwind CSS", "Supabase", "Python", "Cohere"],
       description: "A full-stack healthcare platform that transforms unstructured patient conversations into clinical timelines to streamline rural care coordination. Won at Spark Hacks 2026",
-      images: ["/projects/Spark-1-image.jpg", "/projects/Spark-2-image.png", "/projects/Spark-3-image.png"]
+      images: ["/projects/Spark-1-image.jpg", "/projects/Spark-2-image.jpg", "/projects/Spark-3-image.jpg"]
     },
     {
       title: "Trash To Impress",
