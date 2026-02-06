@@ -16,7 +16,7 @@ export default function ProjectsPage() {  const sampleProjects = [
       websiteLink: "https://github.com/liamma06/trashtoimpress",
       youtubeLink: "https://www.youtube.com/embed/QQ1ePIDMNyg",
       githubLink: "https://github.com/liamma06/trashtoimpress",      
-      technologies: ["Next.js", "TypeScript", "Tailwind CSS", "FastAPI", "Python", "Gemini API", "LangChain","LangGraph"],
+      technologies: ["Next.js", "TypeScript", "FastAPI", "Python", "Gemini API", "LangChain","LangGraph"],
       description: "Product designing tool for reusing waste materials, powered by Gemini and LangChain workflow. Submitted to Hack the Campus",
       images: ["/projects/TTIhomepage.png", "/projects/TTIinput.png","/projects/TTI4ideas.png", "/projects/TTIedit.png", "/projects/TTILamp.png", "/projects/TTIfinal.png"]
     },
@@ -34,7 +34,7 @@ export default function ProjectsPage() {  const sampleProjects = [
       websiteLink: "https://mornings-with-lebron.vercel.app/",
       youtubeLink: "https://www.youtube.com/embed/Sri6EJDq8gE",
       githubLink: "https://github.com/liamma06/mornings-with-lebron",      
-      technologies: ["Next.js", "TypeScript", "Chart.js", "Express.js", "Tailwind CSS", "Anthropic API"],
+      technologies: ["Next.js", "TypeScript", "Chart.js", "Express.js", "Anthropic API"],
       description: "A prototype motivational journaling web app featuring LeBron-themed quotes and emotional insight charts",
       images: ["/projects/lebronhome.png", "/projects/lebronstats.png"]
     },
@@ -43,7 +43,7 @@ export default function ProjectsPage() {  const sampleProjects = [
       websiteLink: "https://askql-bt0x99yab-liamma06s-projects.vercel.app/",
       youtubeLink: "https://www.youtube.com/embed/mFFeuv-W9BI",
       githubLink: "https://github.com/liamma06/askql/tree/main",
-      technologies: ["Next.js", "TypeScript", "Tailwind CSS", "SQLite","Redis", "Anthropic API", "GCP", "GO"],
+      technologies: ["Next.js", "TypeScript", "SQLite","Redis", "Anthropic API", "GCP", "GO"],
       description: "web app for querying a csv file using natural language or SQL",
       images:["/projects/askqlMain.jpeg", "/projects/askqlDash.png", "/projects/askHistory.png"]
     }
